@@ -1,7 +1,7 @@
 import 'package:animated_login/screens/login/widgets/form_container.dart';
+import 'package:animated_login/screens/login/widgets/login_animation.dart';
 import 'package:animated_login/screens/login/widgets/login_logo.dart';
 import 'package:animated_login/screens/login/widgets/signup_button.dart';
-import 'package:animated_login/screens/login/widgets/stagger_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen>
                     SignUpButton(),
                   ],
                 ),
-                StaggerAnimation(controller: _animationController.view),
+                LoginAnimation(controller: _animationController.view),
               ],
             )
           ],

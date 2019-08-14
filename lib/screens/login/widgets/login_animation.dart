@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class StaggerAnimation extends StatelessWidget {
+class LoginAnimation extends StatelessWidget {
   final AnimationController controller;
   final Animation<double> buttonSqueezeAnimation;
   final Animation<double> buttonZoomOut;
 
-  StaggerAnimation({@required this.controller})
+  LoginAnimation({@required this.controller})
       : buttonSqueezeAnimation = Tween(begin: 400.0, end: 50.0).animate(
             CurvedAnimation(parent: controller, curve: Interval(0.0, 0.150))),
         buttonZoomOut = Tween(begin: 50.0, end: 1000.0).animate(CurvedAnimation(
