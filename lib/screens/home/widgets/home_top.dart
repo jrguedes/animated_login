@@ -39,20 +39,20 @@ class HomeTop extends StatelessWidget {
               width: containerGrowAnimation.value * 40,
               height: containerGrowAnimation.value * 40,
               decoration: BoxDecoration(
-                  shape: BoxShape.circle, color: Color.fromRGBO(80, 210, 194, 0.8)),
+                  shape: BoxShape.circle,
+                  color: Color.fromRGBO(80, 210, 194, 0.8)),
               margin: EdgeInsets.only(left: 80),
               child: Center(
                 child: Text(
-                  '2',
-                  style: TextStyle(fontSize: containerGrowAnimation.value * 17,
-                  fontWeight: FontWeight.w200,
-                    color: Colors.white70
-                  ),
+                  '7',
+                  style: TextStyle(
+                      fontSize: containerGrowAnimation.value * 17,
+                      fontWeight: FontWeight.w200,
+                      color: Colors.white70),
                 ),
               ),
             ),
           ),
-
           CategoryView()
         ],
       )),

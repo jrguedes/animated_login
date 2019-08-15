@@ -30,7 +30,7 @@ class _CategoryViewState extends State<CategoryView> {
         children: <Widget>[
           InkWell(
             //se colocar IconButton usar disabledColor:
-            onTap: () => _category > 0 ? selectBackward() : null,
+            onTap: () =>  _category > 0 ? selectBackward() : null,
             child: Icon(
               Icons.arrow_back_ios,
               color: Colors.white,
@@ -46,7 +46,7 @@ class _CategoryViewState extends State<CategoryView> {
           ),
           InkWell(
             onTap: () =>
-                _category < categories.length - 1 ? selectForward() : null,
+               _category < categories.length - 1 ? selectForward() : null,
             child: Icon(
               Icons.arrow_forward_ios,
               color: Colors.white,

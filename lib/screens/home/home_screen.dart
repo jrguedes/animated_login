@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen>
   void initState() {
     super.initState();
     _controller =
-        AnimationController(vsync: this, duration: Duration(seconds: 2));
+        AnimationController(vsync: this, duration: Duration(seconds: 3));
 
     _controller.forward();
   }
