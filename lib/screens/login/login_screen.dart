@@ -3,6 +3,7 @@ import 'package:animated_login/screens/login/widgets/form_container.dart';
 import 'package:animated_login/screens/login/widgets/login_animation.dart';
 import 'package:animated_login/screens/login/widgets/login_logo.dart';
 import 'package:animated_login/screens/login/widgets/signup_button.dart';
+import 'package:animated_login/screens/standard_widgets/animated_login_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
@@ -56,7 +57,14 @@ class _LoginScreenState extends State<LoginScreen>
                     SignUpButton(),
                   ],
                 ),
-                LoginAnimation(controller: _animationController.view),
+                //LoginAnimation(controller: _animationController.view),
+                AnimatedLoginButton(
+                    controller: _animationController,
+                    buttonText: 'Sign In',
+                    buttonColor: Color.fromRGBO(247, 64, 106, 1.0),
+                    textColor: Colors.white,
+                    fadeTag: 'fade'
+                )
               ],
             )
           ],
