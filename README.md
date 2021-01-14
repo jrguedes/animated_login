@@ -1,6 +1,8 @@
 # animated_login
 
-A new Flutter application.
+This is an example of an Animated Login and an animated list.
+
+![](animated_login.gif)
 
 ## Getting Started
 
