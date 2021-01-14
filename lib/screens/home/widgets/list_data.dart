@@ -6,11 +6,7 @@ class ListData extends StatelessWidget {
   final ImageProvider image;
   final EdgeInsets margin;
 
-  ListData(
-      {@required this.title,
-      @required this.subtitle,
-      @required this.image,
-      @required this.margin});
+  ListData({@required this.title, @required this.subtitle, @required this.image, @required this.margin});
 
   @override
   Widget build(BuildContext context) {
@@ -29,33 +25,42 @@ class ListData extends StatelessWidget {
       child: Row(
         children: <Widget>[
           buildCircularProfileContainer(),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              buildTitleText(),
-              SizedBox(
-                height: 5,
+          Expanded(
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  buildTitleText(),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  buildSubtitleText()
+                ],
               ),
-              buildSubtitleText()
-            ],
+            ),
           )
         ],
       ),
     );
   }
 
-  Text buildSubtitleText() {
-    return Text(
-      subtitle,
-      style: TextStyle(
-          fontSize: 18, color: Colors.grey, fontWeight: FontWeight.w300),
+  Widget buildSubtitleText() {
+    return Container(
+      child: Text(
+        subtitle,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(fontSize: 15, color: Colors.grey, fontWeight: FontWeight.w300),
+      ),
     );
   }
 
-  Text buildTitleText() {
-    return Text(
-      title,
-      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+  Widget buildTitleText() {
+    return Container(
+      child: Text(
+        title,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+      ),
     );
   }
 

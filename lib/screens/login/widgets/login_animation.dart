@@ -6,11 +6,10 @@ class LoginAnimation extends StatelessWidget {
   final Animation<double> buttonZoomOut;
 
   LoginAnimation({@required this.controller})
-      : buttonSqueezeAnimation = Tween(begin: 400.0, end: 50.0).animate(
-            CurvedAnimation(parent: controller, curve: Interval(0.0, 0.150))),
-        buttonZoomOut = Tween(begin: 50.0, end: 1000.0).animate(CurvedAnimation(
-            parent: controller,
-            curve: Interval(0.5, 1.0, curve: Curves.bounceOut)));
+      : buttonSqueezeAnimation =
+            Tween(begin: 400.0, end: 50.0).animate(CurvedAnimation(parent: controller, curve: Interval(0.0, 0.150))),
+        buttonZoomOut = Tween(begin: 50.0, end: 1000.0)
+            .animate(CurvedAnimation(parent: controller, curve: Interval(0.5, 1.0, curve: Curves.bounceOut)));
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +41,7 @@ class LoginAnimation extends StatelessWidget {
                     height: buttonZoomOut.value,
                     decoration: BoxDecoration(
                       color: Color.fromRGBO(247, 64, 106, 1.0),
-                      /*shape: buttonZoomOut.value < 500
-                          ? BoxShape.circle
-                          : BoxShape.rectangle,
-                      */
-                      borderRadius: BorderRadius.all(
-                          Radius.circular(buttonZoomOut.value < 500 ? 30 : 0)),
+                      borderRadius: BorderRadius.all(Radius.circular(buttonZoomOut.value < 500 ? 30 : 0)),
                     ),
                   ),
           )),
@@ -58,11 +52,7 @@ class LoginAnimation extends StatelessWidget {
     if (buttonSqueezeAnimation.value > 75) {
       return Text(
         'Sign In',
-        style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.w300,
-            letterSpacing: 0.3),
+        style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w300, letterSpacing: 0.3),
       );
     } else {
       return CircularProgressIndicator(

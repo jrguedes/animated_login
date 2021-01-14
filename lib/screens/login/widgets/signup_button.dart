@@ -7,15 +7,10 @@ class SignUpButton extends StatelessWidget {
       padding: EdgeInsets.only(top: 160),
       onPressed: () {},
       child: Text(
-        'Não possui uma conta? Cadastre-se!',
+        '''Don't have an account? Sign up!''',
         overflow: TextOverflow.ellipsis,
-        //caso o texto passe da tela coloca (...)
         textAlign: TextAlign.center,
-        style: TextStyle(
-            fontWeight: FontWeight.w300,
-            color: Colors.white,
-            fontSize: 12,
-            letterSpacing: 0.5),
+        style: TextStyle(fontWeight: FontWeight.w300, color: Colors.white, fontSize: 12, letterSpacing: 0.5),
       ),
     );
   }

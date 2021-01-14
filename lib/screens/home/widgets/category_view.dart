@@ -6,7 +6,7 @@ class CategoryView extends StatefulWidget {
 }
 
 class _CategoryViewState extends State<CategoryView> {
-  final List<String> categories = ['TRABALHAR', 'ESTUDAR', 'CASA'];
+  final List<String> categories = ['JOB', 'STUDY', 'HANG OUT'];
   int _category = 0;
 
   void selectForward() {
@@ -49,11 +49,7 @@ class _CategoryViewState extends State<CategoryView> {
   Text buildCategoryText() {
     return Text(
       '${categories[_category].toUpperCase()}',
-      style: TextStyle(
-          fontWeight: FontWeight.w400,
-          letterSpacing: 1.2,
-          fontSize: 18,
-          color: Colors.white70),
+      style: TextStyle(fontWeight: FontWeight.w400, letterSpacing: 1.2, fontSize: 18, color: Colors.white70),
     );
   }
 
