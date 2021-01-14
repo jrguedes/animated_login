@@ -2,7 +2,7 @@
 
 This is an example of an Animated Login and an animated list.
 
-![](animated_login.gif)
+![](animated-login.gif)
 
 ## Getting Started
 
